@@ -1,0 +1,60 @@
+header {
+  .navbar {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+
+      mat-icon {
+        margin-right: 8px;
+      }
+    }
+
+    .navbar-nav {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .form-inline {
+      display: flex;
+      align-items: center;
+
+      mat-form-field {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/* Basic styling for navigation items */
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #007bff; /* Default link color */
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Styling for the active navigation item */
+.nav-item.active .nav-link {
+  color: #ffffff; /* Change text color for active link */
+  background-color: #007bff; /* Background color for active link */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+/* Optional: add hover effect for non-active links */
+.nav-link:hover {
+  color: #0056b3; /* Darker color on hover */
+  background-color: #e9ecef; /* Light background on hover */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+

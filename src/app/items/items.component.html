@@ -1,0 +1,42 @@
+<!-- item-page.component.html -->
+<div class="item-page-container">
+    <!-- Categories and Search Bar -->
+    <div class="header">
+        <div class="categories">
+            <button class="category-button" (click)="GetSpecificData('electronics')">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/460/483/non_2x/vector-electronic-technology-devices-icon.jpg"
+                    alt="Electronics" class="category-icon" />
+                <span class="category-label">Electronics</span>
+            </button>
+            <button class="category-button" (click)="GetSpecificData('men\'s clothing')">
+                <img src="./assets/boy.png" alt="Clothes for Men" class="category-icon" />
+                <span class="category-label">Clothes for Men</span>
+            </button>
+            <button class="category-button" (click)="GetSpecificData('women\'s clothing')">
+                <img src="./assets/image.png" alt="Clothes for Girls" class="category-icon" />
+                <span class="category-label">Clothes for Girls</span>
+            </button>
+        </div>
+        <div class="search-bar" style="display: flex;">
+            <input type="text" placeholder="Search for products..." (input)="performSearch($event)"
+                [(ngModel)]="searchQuery" />
+            <button (click)="performSearch(searchQuery)">Search</button>
+        </div>
+
+
+    </div>
+
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <div class="product-card" *ngFor="let product of items">
+            <div style="padding: 20px; border-radius: 20px;">
+                <img [src]="product.image" alt="{{ product.title }}" class="product-image" />
+            </div>
+            <div class="product-info">
+                <h2>{{ product.title }}</h2>
+                <p class="price">${{ product.price }}</p>
+            </div>
+        </div>
+    </div>
+</div>
